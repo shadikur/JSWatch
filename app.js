@@ -45,8 +45,16 @@ function startTimer() {
   if (mins <= 9) {
     appendMins.innerHTML = "0" + mins;
   }
-  if (tens > 9) {
+  if (mins > 9) {
     appendMins.innerHTML = mins;
+  }
+
+  if (tens > 60) {
+    console.log("Minutes");
+    mins++;
+    appendMins.innerHTML = "0" + mins;
+    mins = 0;
+    appendMins.innerHTML = "0" + 0;
   }
   if (tens > 99) {
     console.log("seconds");
